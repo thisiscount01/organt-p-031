@@ -1,0 +1,95 @@
+{
+  "1_home": {
+    "status": "PASS",
+    "detail": "홈 로드 성공. found: ['.movie-card(32)', \"img[src*='tmdb'](32)\", \"img[src*='image.tmdb'](32)\", 'h1(5)', 'h2(3)']",
+    "screenshot": "qa_screenshots/01_home.png"
+  },
+  "2_movie_detail": {
+    "status": "PARTIAL",
+    "detail": "AI추천:API:not-list,rec_ui:[],rec_text:True | iframe:0,yt:0",
+    "screenshot": "qa_screenshots/02_movie_detail.png"
+  },
+  "3_quiz_select": {
+    "status": "PASS",
+    "detail": "3종 모드 모두 확인: {'poster': True, 'director': True, 'cast': True}, btns=['게임 시작!']",
+    "screenshot": "qa_screenshots/03_quiz_select.png"
+  },
+  "4_quiz_game": {
+    "status": "PARTIAL",
+    "detail": "question:True, options:False(btn:1), score:False, timer:True, start_clicked:True",
+    "screenshot": "qa_screenshots/04_quiz_game.png"
+  },
+  "5_community": {
+    "status": "PASS",
+    "detail": "API:{'/api/community/posts': '200', '/api/posts': '200', '/api/community': '200'}, ui_posts:True, post_items:0",
+    "api_bodies": {
+      "/api/community/posts": "{\"posts\":[{\"id\":1782210161844,\"title\":\"QA Test Post\",\"content\":\"Automated QA test\",\"movieId\":null,\"m",
+      "/api/posts": "{\"posts\":[{\"id\":1782210161844,\"title\":\"QA Test Post\",\"content\":\"Automated QA test\",\"movieId\":null,\"m",
+      "/api/community": "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"wi"
+    },
+    "screenshot": "qa_screenshots/05_community.png"
+  },
+  "6_auth": {
+    "status": "PASS",
+    "detail": "회원가입:409, 로그인:토큰확인(len=192), login_ui:True",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc4M...",
+    "screenshot": "qa_screenshots/06_auth.png"
+  },
+  "7_leaderboard": {
+    "status": "PASS",
+    "detail": "API:{'/api/leaderboard': '200', '/api/rankings': '200', '/api/scores': '200', '/api/game/scores': '200'}, json_ok:False, lb_ui:True",
+    "api_sample": {
+      "/api/leaderboard": "{\"leaderboard\":[{\"id\":1782193744901,\"username\":\"testuser_qa\",\"score\":1500,\"mode\":\"poster\",\"correct\":7,\"total\":10,\"time\":180,\"date\":\"2026-06-23T05:49:0",
+      "/api/rankings": "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Cin",
+      "/api/scores": "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Cin",
+      "/api/game/scores": "{\"leaderboard\":[{\"id\":1782193744901,\"username\":\"testuser_qa\",\"score\":1500,\"mode\":\"poster\",\"correct\":7,\"total\":10,\"time\":180,\"date\":\"2026-06-23T05:49:0"
+    },
+    "screenshot": "qa_screenshots/07_leaderboard.png"
+  },
+  "8_urls": {
+    "status": "PASS",
+    "detail": "5/5 URL 정상 렌더링",
+    "routes": {
+      "movies": {
+        "url": "https://organt-p-031.onrender.com/#/movies",
+        "pass": true,
+        "body_len": 1318,
+        "title": "CineAI — AI 영화 추천 퀴즈 게임",
+        "screenshot": "qa_screenshots/08_movies.png",
+        "snippet": "CineAI\n홈\n영화\n퀴즈\n커뮤니티\n랭킹\n로그인\n🎬 영화 전체 목록\n전체\n액션\n모험\n애니메이션\n코미디\n범죄\n다큐멘터리\n드라마\n가족\n판타지\n역사\n"
+      },
+      "quiz": {
+        "url": "https://organt-p-031.onrender.com/#/quiz",
+        "pass": true,
+        "body_len": 493,
+        "title": "CineAI — AI 영화 추천 퀴즈 게임",
+        "screenshot": "qa_screenshots/08_quiz.png",
+        "snippet": "CineAI\n홈\n영화\n퀴즈\n커뮤니티\n랭킹\n로그인\n🎮\nCineAI 퀴즈\n\n영화 지식을 겨뤄봐요! 모드를 선택하고 도전하세요.\n\n🎬\n포스터 → 제목"
+      },
+      "leaderboard": {
+        "url": "https://organt-p-031.onrender.com/#/leaderboard",
+        "pass": true,
+        "body_len": 917,
+        "title": "CineAI — AI 영화 추천 퀴즈 게임",
+        "screenshot": "qa_screenshots/08_leaderboard.png",
+        "snippet": "CineAI\n홈\n영화\n퀴즈\n커뮤니티\n랭킹\n로그인\n🏆 명예의 전당\n\nCineAI 퀴즈 최강자들의 기록\n\n전체 모드\n포스터 → 제목\n포스터 → 감독"
+      },
+      "community": {
+        "url": "https://organt-p-031.onrender.com/#/community",
+        "pass": true,
+        "body_len": 870,
+        "title": "CineAI — AI 영화 추천 퀴즈 게임",
+        "screenshot": "qa_screenshots/08_community.png",
+        "snippet": "CineAI\n홈\n영화\n퀴즈\n커뮤니티\n랭킹\n로그인\n💬 커뮤니티\n\n영화 이야기를 나눠요 — 리뷰, 토론, 추천!\n\n최신순\n인기순\n전체\n리뷰\n토론\n추"
+      },
+      "login": {
+        "url": "https://organt-p-031.onrender.com/#/login",
+        "pass": true,
+        "body_len": 3485,
+        "title": "CineAI — AI 영화 추천 퀴즈 게임",
+        "screenshot": "qa_screenshots/08_login.png",
+        "snippet": "CineAI\n홈\n영화\n퀴즈\n커뮤니티\n랭킹\n로그인\n추천 영화\nGodzilla vs. Kong\n액션\nSF\n 8.4\n2021\n Adam Wingard"
+      }
+    }
+  }
+}

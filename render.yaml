@@ -1,0 +1,13 @@
+# Live URL: https://organt-p-031.onrender.com
+services:
+  - type: web
+    name: organt-p-031
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true

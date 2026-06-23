@@ -1,0 +1,103 @@
+{
+  "results": {
+    "G1A_total": 500,
+    "G1A_pass": true,
+    "G1B_api_status": 200,
+    "G1B_api_keys": [
+      "type",
+      "questionId",
+      "question",
+      "image",
+      "movie",
+      "choices",
+      "timeLimit"
+    ],
+    "G1B_poster_url_from_api": "https://image.tmdb.org/t/p/w500/h0Xsy4aomjMO47RpoHv8lnfbkoE.jpg",
+    "G1B_poster_cdn_status": 200,
+    "G1B_tmdb_imgs_dom": 1,
+    "G1B_tmdb_sample": "https://image.tmdb.org/t/p/w500/eLFfl7vS8dkeG1hKp5mwbm37V83.jpg",
+    "G1B_pass": true,
+    "G2A_mode_keywords": [
+      "포스터",
+      "title",
+      "제목"
+    ],
+    "G2A_buttons": [
+      "A\nAladdin",
+      "B\nRatatouille",
+      "C\nThe Incredibles",
+      "D\nDie Hard"
+    ],
+    "G2A_has_mode_ui": true,
+    "G2B_api_modes": [
+      {
+        "type": "poster",
+        "status": 200,
+        "keys": [
+          "type",
+          "questionId",
+          "question",
+          "image",
+          "movie",
+          "choices",
+          "timeLimit"
+        ],
+        "has_data": true,
+        "pass": true
+      },
+      {
+        "type": "director",
+        "status": 200,
+        "keys": [
+          "type",
+          "questionId",
+          "question",
+          "image",
+          "movie",
+          "choices",
+          "timeLimit"
+        ],
+        "has_data": true,
+        "pass": true
+      },
+      {
+        "type": "cast",
+        "status": 200,
+        "keys": [
+          "type",
+          "questionId",
+          "question",
+          "image",
+          "movie",
+          "choices",
+          "timeLimit"
+        ],
+        "has_data": true,
+        "pass": true
+      }
+    ],
+    "G2B_pass": true,
+    "G2C_ui_modes": [
+      {
+        "mode": "poster",
+        "clicked": false,
+        "has_content": false
+      },
+      {
+        "mode": "director",
+        "clicked": false,
+        "has_content": false
+      },
+      {
+        "mode": "cast",
+        "clicked": false,
+        "has_content": false
+      }
+    ],
+    "G2C_pass": false,
+    "G2D_console_errors": [],
+    "G2D_pass": true
+  },
+  "G1_pass": true,
+  "G2_pass": true
+}

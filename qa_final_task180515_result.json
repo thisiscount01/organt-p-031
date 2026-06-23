@@ -1,0 +1,38 @@
+{
+  "G1-1 /api/movies total>=300": {
+    "status": "PASS",
+    "detail": "total=500"
+  },
+  "G1-2 TMDB CDN poster 200": {
+    "status": "PASS",
+    "detail": "HTTP 200"
+  },
+  "G2-poster questions count=3": {
+    "status": "PASS",
+    "detail": "got 3"
+  },
+  "G2-poster image field": {
+    "status": "PASS",
+    "detail": "q[0] keys=['type', 'prompt', 'image', 'correctId', 'choices', 'timeLimit']"
+  },
+  "G2-director questions count=3": {
+    "status": "PASS",
+    "detail": "got 3"
+  },
+  "G2-director choices[4]": {
+    "status": "PASS",
+    "detail": "q[0] choices=[{'id': 'Chris Columbus', 'label': 'Chris Columbus'}, {'id': 'Edward Zwick', 'label': 'Edward Zwick'}, {'id': 'Robert Rodriguez', 'label': 'Robert Rodriguez'}, {'id': 'Nicolas Winding Refn', 'label': 'Nicolas Winding Refn'}]"
+  },
+  "G2-cast questions count=3": {
+    "status": "PASS",
+    "detail": "got 3"
+  },
+  "G2-cast choices[4]": {
+    "status": "PASS",
+    "detail": "q[0] choices=[{'id': 'Gabriel Byrne', 'label': 'Gabriel Byrne'}, {'id': 'Jesse Eisenberg', 'label': 'Jesse Eisenberg'}, {'id': 'Kevin Spacey', 'label': 'Kevin Spacey'}, {'id': 'Stephen Baldwin', 'label': 'Stephen Baldwin'}]"
+  },
+  "G3 #/movies/399566 상세 렌더링": {
+    "status": "PASS",
+    "detail": "img=6, has_detail=True, url=http://localhost:3000/#/movies/399566, title=CineAI — AI 영화 추천 퀴즈 게임"
+  }
+}

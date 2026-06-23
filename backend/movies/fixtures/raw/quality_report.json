@@ -1,0 +1,42 @@
+{
+  "total_movies": 302,
+  "quality": {
+    "title": {
+      "missing": 0,
+      "missing_pct": 0.0
+    },
+    "overview": {
+      "missing": 65,
+      "missing_pct": 21.52
+    },
+    "poster_path": {
+      "missing": 1,
+      "missing_pct": 0.33
+    },
+    "backdrop_path": {
+      "missing": 6,
+      "missing_pct": 1.99
+    },
+    "release_date": {
+      "missing": 0,
+      "missing_pct": 0.0
+    },
+    "genre_ids": {
+      "missing": 1,
+      "missing_pct": 0.33
+    }
+  },
+  "schema": {
+    "tmdb_id": "int — TMDB movie id",
+    "title": "str — 한국어 제목(없으면 original_title)",
+    "original_title": "str — 원제",
+    "overview": "str — 줄거리 (결측 가능)",
+    "poster_path": "str — /xxxx.jpg (CDN: https://image.tmdb.org/t/p/w500 + poster_path)",
+    "backdrop_path": "str — /xxxx.jpg",
+    "release_date": "YYYY-MM-DD | null",
+    "vote_average": "float — 0.0~10.0",
+    "vote_count": "int",
+    "popularity": "float",
+    "genres": "list[int] — genre pk 배열(=tmdb genre_id)"
+  }
+}
