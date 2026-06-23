@@ -28,7 +28,7 @@ self.addEventListener('activate', e =>
 // ── Keep-alive: SW가 서버를 깨워줌 (Render cold-start 방어) ──────────────
 function keepAlive() {
   fetch('/api/health').catch(() => {});
-  setTimeout(keepAlive, 28 * 60 * 1000); // 28분 간격 (SW 라이프사이클 내 주기적 ping)
+  setTimeout(keepAlive, 13 * 60 * 1000); // 13분 간격 (Render 15분 슬립 전에 ping)
 }
 self.addEventListener('activate', () => { keepAlive(); });
 
